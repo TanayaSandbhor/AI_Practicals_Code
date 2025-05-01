@@ -1,0 +1,43 @@
+package aipractical;
+
+import java.util.Scanner;
+
+public class ElementaryChatBot {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		System.out.println("Welcome to EduBot - Your Admission Assistant!");
+		System.out.println("Type 'Exit' anytime to end the conversation. \n");
+		
+		while(true) {
+			System.out.println("You: ");
+			String input = scanner.nextLine().toLowerCase();
+			
+			if(input.contains("exit")|| input.contains("Bye !")) {
+				System.out.println("EduBot - Thank You for your interrest! All the best for yoyr future !");
+				
+				break;
+			}
+			else if(input.contains("courses")|| input.contains("program")|| input.contains("offer")) {
+				System.out.println("EduBot - W eoffer B.Tech, BCA,BBA,MBA,and M.Tech program");
+				
+			}else if(input.contains("admission")|| input.contains("process")|| input.contains("apply")) {
+				System.out.println("EduBot - You can apply online through our official website. The process includes registration, document upload, and paymnet of application fees");
+			}else if(input.contains("eligibility")|| input.contains("criteria")){
+				
+				System.out.println("EduBot : for undergratuate courses, you need a minimum of 50% in 12th standard. for postgratuate, a relevant bachlore's degree is required.");
+			}else if(input.contains("fees")|| input.contains("fee structure")||input.contains("tution")) {
+				System.out.println("EduBot - The fee varies by course . For B.Tech, it 's rupee.1,00,000 per year. You can find full details on our website.");
+				
+			}else if(input.contains("contact")|| input.contains("phone")||input.contains("email")) {
+				System.out.println("EduBot : You can contact us at +91-9111333322 or email admission@xyzuniversity.ac.in");
+				
+			}else {
+				System.out.println("EduBot : I'm sorry didn't understand that. Colud you please rephrase ?");
+			}
+		}
+	}
+
+}
