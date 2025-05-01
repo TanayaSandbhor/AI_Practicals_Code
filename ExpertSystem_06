@@ -1,0 +1,44 @@
+package aipractical;
+
+import java.util.Scanner;
+
+public class ExpertSystem {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to the Hospital Expert System");
+		System.out.println("Do you have fever? (yes/no)");
+		String fever = scanner.nextLine();
+		
+		System.out.println("Do you have cough? (yes/no)");
+		String cough = scanner.nextLine();
+		
+		System.out.println("Do you have sore throat? (yes/no)");
+		String sorethroat = scanner.nextLine();
+		
+		System.out.println("Do you have chest pain? (yes/no)");
+		String chestpain = scanner.nextLine();
+		
+		System.out.println("Do you have jointpain? (yes/no)");
+		String jointpain = scanner.nextLine();
+		
+//		Simple decision rules
+		if(fever.equalsIgnoreCase("yes") && cough.equalsIgnoreCase("yes") )
+		{
+			System.out.println("You may have the flu.");
+		}else if(fever.equalsIgnoreCase("yes") && sorethroat.equalsIgnoreCase("yes")) {
+			System.out.println("You may have throat infection.");
+		}else if(chestpain.equalsIgnoreCase("yes")) {
+			System.out.println("You may have a heart-related issue. PLease see a doctor.");
+		}else if(jointpain.equalsIgnoreCase("yes")) {
+			System.out.println("You may have arthritis");
+		}else {
+			System.out.println("Diagnosis unclear. Please consult a doctor.");
+		}
+		
+		scanner.close();
+
+	}
+
+}
